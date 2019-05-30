@@ -73,7 +73,7 @@ def all_supplies_in_holidays(holiday_hash)
       value.each do |holiday, item|
         new_array = []
         item.each {|item| new_array << item}
-        puts "  #{holiday.to_s.split(" ")}: #{new_array.join(", ")}"
+        puts "  #{holiday.to_s.split("_")}: #{new_array.join(", ")}"
       end
     end
   end
