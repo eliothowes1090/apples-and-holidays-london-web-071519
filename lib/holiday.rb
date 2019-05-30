@@ -82,9 +82,8 @@ def all_holidays_with_bbq(holiday_hash)
 
   holiday_hash.each do |season, holiday|
     if holiday.has_value?("BBQ")
-      return holiday
+      holiday.collect {|item| return item}
     end
-  binding.pry
   end
 
 end
