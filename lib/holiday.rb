@@ -68,12 +68,9 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
 
   holiday_hash.select do |key, value|
-    if key == :winter && :summer
-      puts "#{key.capitalize}:"
+    puts "#{key.capitalize}:"
       value.each do |holiday, item|
-        new_array = []
-        item.each {|item| new_array << item}
-        puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{new_array.join(", ")}"
+        puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
       end
     end
   end
