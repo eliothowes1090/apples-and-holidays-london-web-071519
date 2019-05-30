@@ -85,4 +85,4 @@ def all_holidays_with_bbq(holiday_hash)
   end
 end
 
-hash.select{ |_,v| v.any?{|e| array.include? e } }.keys
+# hash.select{ |_,v| v.any?{|e| array.include? e } }.keys
