@@ -72,6 +72,7 @@ holiday_hash.select do |key, value|
       value.each do |holiday, item|
         puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{item.join(", ")}"
       end
+    end
 end
 
 # holiday_hash.each do | season, holiday|
