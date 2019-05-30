@@ -81,7 +81,9 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
 
   holiday_hash.each do |season, holiday|
-    holiday.has_value?("BBQ")
+    if holiday.has_value?("BBQ")
+      return holiday
+    end
   end
 
 end
