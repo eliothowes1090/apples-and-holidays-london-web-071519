@@ -81,8 +81,15 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
 
   holiday_hash.each do |season, holiday|
-    holiday.select {|hols, items| items.include?("BBQ")}.keys
+    holiday.select {|hols, items| items.include?("BBQ")}
+    return holiday
   end
 end
 
 # hash.select{ |_,v| v.any?{|e| array.include? e } }.keys
+holiday_hash.map do |season, holiday|
+    holiday.map do |holiday, item|
+      holiday if item.include?("BBQ")
+    end 
+  end.flatten.compact
+end
